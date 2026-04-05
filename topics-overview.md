@@ -1,3 +1,4 @@
+そろそろ整理をする
 - topics
 	- テニス
 		- [x] jta-rule : jta-rule/
@@ -29,10 +30,34 @@
 		- ビジュアルシンカー
 	- IT
 		- プロジェクトマネジメント
+			- スタイル
+				- waterfall
+				- agile
+			- WBS
 		- 製造
+		- プログラミング言語
+			- backend
+				- python
+				- C
+				- C++
+				- Rust
+				- FortRan
+				- Kotolin
+				- GO
+				- java
+			- flontend
+				- javascript
+				- html
+				- css
+				- typescript
 	- AI
 		- 種類
 			- ChatGPT/Claude/Gemini...
 		- 構造
 			- モデルとか学習とか
 	- 資格
+		- 基本情報技術者
+		- 応用情報技術者
+		- DB系
+		- Azure系
+		- AWS系
