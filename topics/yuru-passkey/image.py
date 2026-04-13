@@ -20,9 +20,9 @@ if True:
         def チャレンジ(self, user_: User):
             チャレンジ文字列 = str(randint(100, 999))
             チャレンジ暗号化結果 = user_.チャレンジ暗号化(チャレンジ文字列)
-            チャレンジ複合結果 = self.チャレンジ複合(チャレンジ暗号化結果)
+            チャレンジ復号結果 = self.チャレンジ復号(チャレンジ暗号化結果)
 
-            if チャレンジ文字列 == チャレンジ複合結果:
+            if チャレンジ文字列 == チャレンジ復号結果:
                 for user_info in self.user_bank:
                     user_info: UserInfo
                     if user_info.userid == User.userid:
