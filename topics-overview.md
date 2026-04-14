@@ -6,6 +6,7 @@
 	- youtube
 		- ゆるコン
 			- [x] パスキー : yuru-passkey/
+			- [x] 二分探索木 : yuru-binary_search_tree/
 		- プテカイ
 			- [x] 意見コメント1 : putekai/
 			- フェデラーのクラッチ力の回
