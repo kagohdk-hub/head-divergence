@@ -58,6 +58,9 @@
 			- ChatGPT/Claude/Gemini...
 		- 構造
 			- モデルとか学習とか
+		- 利用体系/料金体系
+			- GithubCopilot
+			- Continue
 	- 資格
 		- 基本情報技術者
 		- 応用情報技術者
