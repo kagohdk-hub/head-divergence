@@ -1,4 +1,22 @@
 そろそろ整理をする
+```mermaid
+graph LR
+	subgraph 思想
+		雑思考
+		問い
+	end
+	subgraph 知識
+		生データ
+		サマリーデータ
+	end
+	subgraph アイディア
+		システム
+	end
+	知識 ~~~ 思想 ~~~ アイディア
+	生データ --> サマリーデータ
+	雑思考 --> 問い
+```
+
 - topics
 	- **未分類**
 		- 知識/思想/アイディア	knowledge/thought/idea
