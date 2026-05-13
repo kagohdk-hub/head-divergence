@@ -15,6 +15,15 @@ if True:
     # installed
     # custom
 
+    # 拡張性のための記載
+    def _get_parent_dir():
+        """
+        カレントディレクトリ、親ディレクトリの情報取得
+        本pythonコード自体をどこかのフォルダ内に配置したい場合、必要になる。
+        """
+        current_dir = os.getcwd()
+        parent_dir = os.path.join(current_dir, os.pardir)
+
     def _get_path_list(path: str, pattern: str = "**/*") -> list[str]:
         # 普通に、import glob   glob.glob(pattern)としてもOK
         # return glob(pattern)
@@ -36,8 +45,6 @@ if True:
         for pick_folder_path in pathlist[:3]:
             _copy_pickup_files(pick_folder_path)
             print(pick_folder_path)
-        ...
 
     if __name__ == "__main__":
         main()
-    ...
