@@ -1,0 +1,34 @@
+
+無料版がある:
+setup方法:
+  - cmd + shift + p で github と検索して、 "githubに公開" を選択
+  - mac の vscode にはすでにcopilot 拡張が入っていた
+  - 右下のアイコンをクリックして、サインイン
+  - github アカウントでサインイン
+  - これで、無料版が利用可能になった
+  - (必ずprivate repositoryを選択すること。)
+学習範囲の限定対策:
+  今の所の自分のベストプラクティス:
+    - 基本 copilot 丸ごと off にしておく
+      使う時だけ、 ワークスペース限定で on にする。
+      （個人情報に関わるファイルが開かれていないことを確認する。）
+
+      こまめに on / off を切り替えることで、習慣化する。
+  案:
+    - copilot 丸ごと on off: |
+        vscode の拡張機能のところで copilot を検索
+        copilot を 無効にする を選択
+        copilot を 有効にする(ワークスペース) を選択
+
+        これで、自分でわざわざ有効にした時のワークスペースだけが参照されるようになった
+    - コード補完のみの on off: |
+        cmd + shift + p で github copilot: toggle と検索すると
+        inline suggestions をオンオフできる
+    - 特定のフォルダは明示的に無視させる: |
+        .copilitignore
+        「ただ、公式ドキュメントに載っていないのでけっこう怪しいです。」と書いているページもある。
+          https://zenn.dev/crow_it_eng/articles/359e839acdeb3c
+
+          このページでは、結論として
+          .copilotignore に記載したファイルでも copilot に渡されていた がっくし
+          と書いてあったので、あまり信用できない。
