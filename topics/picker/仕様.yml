@@ -1,0 +1,22 @@
+memo:
+  - topics/下におくべきではないのかもしれない
+  - 現状は、topics/の中ではなく、一番上のrandom_pick.py
+機能:
+  全体:
+    - 仮案:
+        - 案1:
+            - 引数がpickならpickup
+            - 引数がsaveなら保存
+        - 案2:
+            - 毎回 save してから pickする
+  pick:
+    - pickup-topic/下のフォルダを全て削除する
+    - topic/下のフォルダを選択
+    - 選択したフォルダを丸ごとpickup-topic/下にコピーする
+  save:
+    - pickup-topic/下のフォルダを全てtopics/下に保存する
+    - 同じフォルダ名があれば上書き更新する
+    - 同じフォルダ名がなければ追加する
+バリエーション:
+  select:
+  random:
