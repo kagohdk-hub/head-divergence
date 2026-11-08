@@ -7,6 +7,7 @@ if True:
     """
     from random import randint
     from dataclasses import dataclass
+    from functools import partial
 
     def ランダムに素数選択() -> int:
         raise Exception("処理未作成")
@@ -123,11 +124,36 @@ if True:
         print(f"{元数=} : {暗号化数=} : {復号化数=}")
         assert 元数 == 復号化数 , f"{元数=} != {復号化数=}"
 
-try:
-    秘密鍵で暗号化し公開鍵で復号化する(123)
-except Exception as e:
-    print(f"エラーが発生しました: {type(e).__name__} - {e}")
-try:
-    公開鍵で暗号化し秘密鍵で復号化する(123)
-except Exception as e:
-    print(f"エラーが発生しました: {type(e).__name__} - {e}")
+    def 秘密鍵で暗号化し秘密鍵で復号化する_できない想定(元数):
+        print("\nstart : 秘密鍵で暗号化し秘密鍵で復号化する_できない想定")
+        秘密鍵_, _ = 秘密鍵と公開鍵を生成()
+
+        暗号化数 = 秘密鍵_.暗号化および復号化(元数)
+
+        復号化数 = 秘密鍵_.暗号化および復号化(暗号化数)
+
+        print(f"{元数=} : {暗号化数=} : {復号化数=}")
+        assert 元数 == 復号化数 , f"{元数=} != {復号化数=}"
+
+    def 公開鍵で暗号化し秘密鍵で復号化する_できない想定(元数):
+        print("\nstart : 公開鍵で暗号化し秘密鍵で復号化する_できない想定")
+        _, 公開鍵_ = 秘密鍵と公開鍵を生成()
+
+        暗号化数 = 公開鍵_.暗号化および復号化(元数)
+
+        復号化数 = 公開鍵_.暗号化および復号化(暗号化数)
+
+        print(f"{元数=} : {暗号化数=} : {復号化数=}")
+        assert 元数 == 復号化数 , f"{元数=} != {復号化数=}"
+
+    proc_list = [
+        partial(秘密鍵で暗号化し公開鍵で復号化する, 123)
+        , partial(公開鍵で暗号化し秘密鍵で復号化する, 123)
+        , partial(秘密鍵で暗号化し秘密鍵で復号化する_できない想定, 123)
+        , partial(公開鍵で暗号化し秘密鍵で復号化する_できない想定, 123)
+    ]
+    for proc in proc_list:
+        try:
+            proc()
+        except Exception as e:
+            print(f"エラーが発生しました: {type(e).__name__} - {e}")
